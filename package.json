@@ -1,0 +1,35 @@
+{
+  "name": "@stdlib/math-base-tools-normhermitepoly",
+  "version": "0.0.0",
+  "description": "Evaluate a normalized Hermite polynomial.",
+  "license": "Apache-2.0",
+  "main": "./bundle.js",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/math-base-tools-normhermitepoly.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdmath",
+    "mathematics",
+    "math",
+    "hermite",
+    "eval",
+    "evaluate",
+    "poly",
+    "polyval",
+    "evalpoly",
+    "polynomial",
+    "normalized",
+    "probabilist",
+    "special"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
