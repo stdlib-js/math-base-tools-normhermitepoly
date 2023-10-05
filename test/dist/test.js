@@ -29,27 +29,27 @@ var normhermitepoly = require( './../../dist' );
 
 // FIXTURES //
 
-var random2 = require( './../..xtures/python/random2.json' );
+var random2 = require( './../fixtures/python/random2.json' );
 
-var mediumNegative1 = require( './../..xtures/python/medium_negative_1.json' );
-var mediumNegative2 = require( './../..xtures/python/medium_negative_2.json' );
-var mediumNegative5 = require( './../..xtures/python/medium_negative_5.json' );
+var mediumNegative1 = require( './../fixtures/python/medium_negative_1.json' );
+var mediumNegative2 = require( './../fixtures/python/medium_negative_2.json' );
+var mediumNegative5 = require( './../fixtures/python/medium_negative_5.json' );
 
-var mediumPositive1 = require( './../..xtures/python/medium_positive_1.json' );
-var mediumPositive2 = require( './../..xtures/python/medium_positive_2.json' );
-var mediumPositive5 = require( './../..xtures/python/medium_positive_5.json' );
+var mediumPositive1 = require( './../fixtures/python/medium_positive_1.json' );
+var mediumPositive2 = require( './../fixtures/python/medium_positive_2.json' );
+var mediumPositive5 = require( './../fixtures/python/medium_positive_5.json' );
 
-var smallPositive1 = require( './../..xtures/python/small_positive_1.json' );
-var smallPositive2 = require( './../..xtures/python/small_positive_2.json' );
-var smallPositive5 = require( './../..xtures/python/small_positive_5.json' );
+var smallPositive1 = require( './../fixtures/python/small_positive_1.json' );
+var smallPositive2 = require( './../fixtures/python/small_positive_2.json' );
+var smallPositive5 = require( './../fixtures/python/small_positive_5.json' );
 
-var smallNegative1 = require( './../..xtures/python/small_negative_1.json' );
-var smallNegative2 = require( './../..xtures/python/small_negative_2.json' );
-var smallNegative5 = require( './../..xtures/python/small_negative_5.json' );
+var smallNegative1 = require( './../fixtures/python/small_negative_1.json' );
+var smallNegative2 = require( './../fixtures/python/small_negative_2.json' );
+var smallNegative5 = require( './../fixtures/python/small_negative_5.json' );
 
-var tiny1 = require( './../..xtures/python/tiny_1.json' );
-var tiny2 = require( './../..xtures/python/tiny_2.json' );
-var tiny5 = require( './../..xtures/python/tiny_5.json' );
+var tiny1 = require( './../fixtures/python/tiny_1.json' );
+var tiny2 = require( './../fixtures/python/tiny_2.json' );
+var tiny5 = require( './../fixtures/python/tiny_5.json' );
 
 
 // TESTS //
