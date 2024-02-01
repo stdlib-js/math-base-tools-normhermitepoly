@@ -60,32 +60,20 @@ He_{n}(x)=(-1)^{n} e^{\frac{x^2}{2}} \frac{\mathrm d^{n}}{\mathrm d x^{n}} e^{-\
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/math-base-tools-normhermitepoly
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var normhermitepoly = require( '@stdlib/math-base-tools-normhermitepoly' );
+import normhermitepoly from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@esm/index.mjs';
+```
+
+You can also import the following named exports from the package:
+
+```javascript
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@esm/index.mjs';
 ```
 
 #### normhermitepoly( n, x )
@@ -140,9 +128,14 @@ var v = polyval( 0.5 );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var randu = require( '@stdlib/random-base-randu');
-var normhermitepoly = require( '@stdlib/math-base-tools-normhermitepoly' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+var randu = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu');
+import normhermitepoly from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@esm/index.mjs';
 
 var xx;
 var yy;
@@ -160,6 +153,10 @@ for ( i = 0; i < 100; i++ ) {
         console.log( 'He_%d( %d ) = %d', j, xx, yy );
     }
 }
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -198,7 +195,7 @@ for ( i = 0; i < 100; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -265,9 +262,9 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/tools/evalpoly]: https://github.com/stdlib-js/math-base-tools-evalpoly
+[@stdlib/math/base/tools/evalpoly]: https://github.com/stdlib-js/math-base-tools-evalpoly/tree/esm
 
-[@stdlib/math/base/tools/hermitepoly]: https://github.com/stdlib-js/math-base-tools-hermitepoly
+[@stdlib/math/base/tools/hermitepoly]: https://github.com/stdlib-js/math-base-tools-hermitepoly/tree/esm
 
 <!-- </related-links> -->
 
