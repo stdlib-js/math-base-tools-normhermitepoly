@@ -69,7 +69,7 @@ He_{n}(x)=(-1)^{n} e^{\frac{x^2}{2}} \frac{\mathrm d^{n}}{\mathrm d x^{n}} e^{-\
 To use in Observable,
 
 ```javascript
-normhermitepoly = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@umd/browser.js' )
+normhermitepoly = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@v0.2.0-umd/browser.js' )
 ```
 
 To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
@@ -81,7 +81,7 @@ var normhermitepoly = require( 'path/to/vendor/umd/math-base-tools-normhermitepo
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@v0.2.0-umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
