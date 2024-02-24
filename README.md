@@ -67,13 +67,13 @@ He_{n}(x)=(-1)^{n} e^{\frac{x^2}{2}} \frac{\mathrm d^{n}}{\mathrm d x^{n}} e^{-\
 ## Usage
 
 ```javascript
-import normhermitepoly from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@esm/index.mjs';
+import normhermitepoly from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@v0.2.1-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@esm/index.mjs';
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@v0.2.1-esm/index.mjs';
 ```
 
 #### normhermitepoly( n, x )
@@ -135,7 +135,7 @@ var v = polyval( 0.5 );
 <script type="module">
 
 var randu = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu');
-import normhermitepoly from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@esm/index.mjs';
+import normhermitepoly from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@v0.2.1-esm/index.mjs';
 
 var xx;
 var yy;
