@@ -33,7 +33,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Evaluate a normalized [Hermite polynomial][hermite-polynomial].
+> Evaluate a normalized [Hermite polynomial][hermite-polynomial] using double-precision floating-point arithmetic.
 
 <!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
 
@@ -60,25 +60,37 @@ He_{n}(x)=(-1)^{n} e^{\frac{x^2}{2}} \frac{\mathrm d^{n}}{\mathrm d x^{n}} e^{-\
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-tools-normhermitepoly
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import normhermitepoly from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@deno/mod.js';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@deno/mod.js';
+var normhermitepoly = require( '@stdlib/math-base-tools-normhermitepoly' );
 ```
 
 #### normhermitepoly( n, x )
 
-Evaluates a normalized [Hermite polynomial][hermite-polynomial] of degree `n`.
+Evaluates a normalized [Hermite polynomial][hermite-polynomial] of degree `n` using double-precision floating-point arithmetic.
 
 ```javascript
 var v = normhermitepoly( 1, 1.0 );
@@ -99,7 +111,7 @@ v = normhermitepoly( -1, 0.5 );
 
 #### normhermitepoly.factory( n )
 
-Returns a `function` for evaluating a normalized [Hermite polynomial][hermite-polynomial] of degree `n`.
+Returns a function for evaluating a normalized [Hermite polynomial][hermite-polynomial] of degree `n` using double-precision floating-point arithmetic.
 
 ```javascript
 var polyval = normhermitepoly.factory( 2 );
@@ -129,25 +141,46 @@ var v = polyval( 0.5 );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var randu = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu');
-import normhermitepoly from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@deno/mod.js';
+var uniform = require( '@stdlib/random-array-uniform' );
+var zeros = require( '@stdlib/array-zeros' );
+var dmap = require( '@stdlib/strided-base-dmap' );
+var logEach = require( '@stdlib/console-log-each' );
+var normhermitepoly = require( '@stdlib/math-base-tools-normhermitepoly' );
 
-var xx;
-var yy;
-var x;
-var y;
-var i;
-var j;
+// Generate random values at which to evaluate a polynomial:
+var x = uniform( 10, -50.0, 50.0, {
+    'dtype': 'float64'
+});
 
-for ( i = 0; i < 100; i++ ) {
-    x = (randu()*100.0) - 50.0;
-    for ( j = 1; j < 3; j++ ) {
-        y = normhermitepoly( j, x );
-        xx = x.toFixed(3);
-        yy = y.toFixed(3);
-        console.log( 'He_%d( %d ) = %d', j, xx, yy );
-    }
-}
+// Create a polynomial function of degree 1:
+var f = normhermitepoly.factory( 1 );
+
+// Allocate an output array:
+var y = zeros( x.length, 'float64' );
+
+// Evaluate the polynomial:
+dmap( x.length, x, 1, y, 1, f );
+logEach( 'He_%d(%.3f) = %.3f', 1, x, y );
+
+// Create a polynomial function of degree 2:
+f = normhermitepoly.factory( 2 );
+
+// Allocate an output array:
+y = zeros( x.length, 'float64' );
+
+// Evaluate the polynomial:
+dmap( x.length, x, 1, y, 1, f );
+logEach( 'He_%d(%.3f) = %.3f', 2, x, y );
+
+// Create a polynomial function of degree 3:
+f = normhermitepoly.factory( 3 );
+
+// Allocate an output array:
+y = zeros( x.length, 'float64' );
+
+// Evaluate the polynomial:
+dmap( x.length, x, 1, y, 1, f );
+logEach( 'He_%d(%.3f) = %.3f', 3, x, y );
 ```
 
 </section>
@@ -186,7 +219,7 @@ for ( i = 0; i < 100; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -253,9 +286,9 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/tools/evalpoly]: https://github.com/stdlib-js/math-base-tools-evalpoly/tree/deno
+[@stdlib/math/base/tools/evalpoly]: https://github.com/stdlib-js/math-base-tools-evalpoly
 
-[@stdlib/math/base/tools/hermitepoly]: https://github.com/stdlib-js/math-base-tools-hermitepoly/tree/deno
+[@stdlib/math/base/tools/hermitepoly]: https://github.com/stdlib-js/math-base-tools-hermitepoly
 
 <!-- </related-links> -->
 
