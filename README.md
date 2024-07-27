@@ -67,13 +67,13 @@ He_{n}(x)=(-1)^{n} e^{\frac{x^2}{2}} \frac{\mathrm d^{n}}{\mathrm d x^{n}} e^{-\
 ## Usage
 
 ```javascript
-import normhermitepoly from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@deno/mod.js';
+import normhermitepoly from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@v0.2.2-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@deno/mod.js';
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@v0.2.2-deno/mod.js';
 ```
 
 #### normhermitepoly( n, x )
@@ -133,7 +133,7 @@ import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@
 import zeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-zeros@deno/mod.js';
 import dmap from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-dmap@deno/mod.js';
 import logEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each@deno/mod.js';
-import normhermitepoly from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@deno/mod.js';
+import normhermitepoly from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-normhermitepoly@v0.2.2-deno/mod.js';
 
 // Generate random values at which to evaluate a polynomial:
 var x = uniform( 10, -50.0, 50.0, {
